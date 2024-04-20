@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Footer } from "@/app/components/footer";
 import { Header } from "@/app/components/header";
 import { cn } from "@/lib/utils";
+import { Sidebar } from "@/app/components/sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja" suppressHydrationWarning>
-      <body className={cn(inter.className, "h-dvh")}>
+      <body className={cn(inter.className, "h-dvh flex flex-col")}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -28,7 +29,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main>{children}</main>
+          <main className="flex flex-1">
+            <Sidebar />
+            <div>{children}</div>
+          </main>
           <Footer />
         </ThemeProvider>
       </body>
