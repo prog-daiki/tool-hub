@@ -31,7 +31,7 @@ export default function RootLayout({
           <Header />
           <main className="flex flex-1">
             <Sidebar />
-            <div>{children}</div>
+            <div className="flex-1 bg-muted/30">{children}</div>
           </main>
           <Footer />
         </ThemeProvider>

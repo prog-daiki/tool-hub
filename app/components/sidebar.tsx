@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const Sidebar = () => {
   return (
-    <div className="hidden lg:block w-80 border-r">
+    <div className="hidden lg:block w-64 border-r">
       <div className="flex flex-col p-4">
         {TAGS.map((tag) => (
           <Button

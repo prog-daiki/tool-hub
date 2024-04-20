@@ -1,14 +1,16 @@
-export const TAGS = [
+import { Tag } from "@/types/tag";
+
+export const TAGS: Tag[] = [
   {
     label: "イラスト",
-    id: "illust",
+    id: "illusts",
   },
   {
     label: "写真",
-    id: "photo",
+    id: "photos",
   },
   {
     label: "アイコン",
-    id: "icon",
+    id: "icons",
   },
 ];
